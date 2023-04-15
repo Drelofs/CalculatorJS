@@ -7,6 +7,7 @@ let firstNumber = undefined;
 let secondNumber = undefined;
 let selectedOperator = undefined;
 let operatorSelected = false;
+let answer = undefined;
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -67,19 +68,18 @@ function selectOperator(operator){
 }
 
 function calculate(){
-    let answer = undefined;
     switch(selectedOperator){
         case "+":
             answer = parseInt(firstNumber, 10) + parseInt(secondNumber, 10);
             break;
         case "-":
-            console.log("-");
+            answer = parseInt(firstNumber, 10) - parseInt(secondNumber, 10);
             break;
         case "*":
-            console.log("*");
+            answer = parseInt(firstNumber, 10) * parseInt(secondNumber, 10);
             break;
-        case "=":
-            console.log("=");
+        case "/":
+            answer = parseInt(firstNumber, 10) / parseInt(secondNumber, 10);
             break;
     }
     document.getElementById('display_field').innerHTML = answer;
