@@ -1,7 +1,7 @@
 const numberButtons = document.querySelectorAll('[data-number]');
 const operatorButtons = document.querySelectorAll('[data-operator]');
 const clearButton = document.querySelector('[data-clear]');
-const commaButton = document.querySelectorAll('[data-comma]');
+const commaButton = document.querySelector('[data-comma]');
 const equalButton = document.querySelector('[data-equals]');
 let firstNumber = undefined;
 let secondNumber = undefined;
@@ -13,6 +13,10 @@ numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         selectNumber(button.innerText);
     })
+})
+
+commaButton.addEventListener("click", () => {
+    selectNumber(".");
 })
 
 operatorButtons.forEach(button => {
@@ -69,21 +73,25 @@ function selectOperator(operator){
 }
 
 function calculate(){
+    firstNumber = Number(firstNumber);
+    secondNumber = Number(secondNumber);
     if(answer){
         firstNumber = answer;
     }
     switch(selectedOperator){
         case "+":
-            answer = parseInt(firstNumber, 10) + parseInt(secondNumber, 10);
+            answer = (firstNumber + secondNumber);
+            console.log(firstNumber);
+            console.log(secondNumber);
             break;
         case "-":
-            answer = parseInt(firstNumber, 10) - parseInt(secondNumber, 10);
+            answer = (firstNumber - secondNumber);
             break;
         case "*":
-            answer = parseInt(firstNumber, 10) * parseInt(secondNumber, 10);
+            answer = (firstNumber * secondNumber);
             break;
         case "/":
-            answer = parseInt(firstNumber, 10) / parseInt(secondNumber, 10);
+            answer = (firstNumber / secondNumber);
             break;
     }
     document.getElementById('display_field').innerHTML = answer;
