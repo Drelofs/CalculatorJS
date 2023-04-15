@@ -26,6 +26,7 @@ clearButton.addEventListener("click", () => {
     secondNumber = undefined;
     operator = undefined;
     operatorSelected = undefined;
+    answer = undefined;
     document.getElementById('display_field').innerHTML = 0;
 })
 
@@ -40,7 +41,7 @@ function selectNumber(number){
         if(!firstNumber){
             firstNumber = number;
         }
-        else{
+        else if(firstNumber && firstNumber.length < 16){
             firstNumber += number;
         }
         currentNumber = firstNumber;
@@ -68,6 +69,9 @@ function selectOperator(operator){
 }
 
 function calculate(){
+    if(answer){
+        firstNumber = answer;
+    }
     switch(selectedOperator){
         case "+":
             answer = parseInt(firstNumber, 10) + parseInt(secondNumber, 10);
@@ -83,8 +87,4 @@ function calculate(){
             break;
     }
     document.getElementById('display_field').innerHTML = answer;
-}
-
-function display(){
-
 }
