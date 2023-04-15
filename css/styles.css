@@ -1,0 +1,21 @@
+.calculator{
+    display: inline-block;
+}
+.display-field{
+    background-color: lightgray;
+    padding: 10px;
+    text-align: right;
+}
+.calc-button{
+    height: 50px;
+    width: 50px;
+    margin: 5px 0;
+    background-color: lightgoldenrodyellow;
+    color: black;
+}
+.clear{
+    width: 200px;
+}
+.zero{
+    width: 100px;
+}
