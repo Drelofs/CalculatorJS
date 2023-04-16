@@ -4,45 +4,97 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <h1>Calculator</h1>
-        <div class="calculator">
-            <div class="display-field" id="display_field">
-                0
-            </div>
-            <div class="button-row">
-                <button class="calc-button clear" data-clear>AC</button>
-                <button class="calc-button" data-operator>/</button>
-            </div>
-            <div class="button-row">
-                <button class="calc-button" data-number>7</button>
-                <button class="calc-button" data-number>8</button>
-                <button class="calc-button" data-number>9</button>
-                <button class="calc-button" data-operator>*</button>
-            </div>
-            <div class="button-row">
-                <button class="calc-button" data-number>4</button>
-                <button class="calc-button" data-number>5</button>
-                <button class="calc-button" data-number>6</button>
-                <button class="calc-button" data-operator>-</button>
-            </div>
-            <div class="button-row">
-                <button class="calc-button" data-number>1</button>
-                <button class="calc-button" data-number>2</button>
-                <button class="calc-button" data-number>3</button>
-                <button class="calc-button" data-operator>+</button>
-            </div>
-            <div class="button-row">
-                <button class="calc-button zero" data-number>0</button>
-                <button class="calc-button" data-comma>,</button>
-                <button class="calc-button" data-equals>=</button>
+        <div class="title">
+            <h1>Simple JS Calculator</h1>
+            <span>Created by Ali S.</span>
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="calculator">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="display-field" id="display_field">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-9">
+                                    <button class="calc-button clear" data-clear>AC</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button operator" data-operator>/</button>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>7</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>8</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>9</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button operator" data-operator>*</button>
+                                </div> 
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>4</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>5</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>6</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button operator" data-operator>-</button>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>1</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>2</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-number>3</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button operator" data-operator>+</button>
+                                </div>
+                                
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <button class="calc-button zero" data-number>0</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button" data-comma>,</button>
+                                </div>
+                                <div class="col-3">
+                                    <button class="calc-button operator" data-equals>=</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
         <script src="js/scripts.js" async defer></script>
     </body>
 </html>

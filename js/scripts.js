@@ -8,9 +8,14 @@ let secondNumber = undefined;
 let selectedOperator = undefined;
 let operatorSelected = false;
 let answer = undefined;
+let calculated = false;
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
+        if(calculated){
+            clear();
+            calculated = false;
+        }
         selectNumber(button.innerText);
     })
 })
@@ -26,11 +31,7 @@ operatorButtons.forEach(button => {
 })
 
 clearButton.addEventListener("click", () => {
-    firstNumber = undefined;
-    secondNumber = undefined;
-    operator = undefined;
-    operatorSelected = undefined;
-    answer = undefined;
+    clear();
     document.getElementById('display_field').innerHTML = 0;
 })
 
@@ -38,6 +39,14 @@ equalButton.addEventListener("click", () => {
     if(firstNumber && secondNumber && selectedOperator)
         calculate();
 })
+
+function clear(){
+    firstNumber = undefined;
+    secondNumber = undefined;
+    operator = undefined;
+    operatorSelected = undefined;
+    answer = undefined;
+}
 
 function selectNumber(number){
     let currentNumber;
@@ -95,4 +104,5 @@ function calculate(){
             break;
     }
     document.getElementById('display_field').innerHTML = answer;
+    calculated = true;
 }
