@@ -7,17 +7,13 @@ body{
 
 .title{
     margin: 32px 0;
-}
-
-.title h1{
     text-align: center;
 }
 
-.title span{
+.github{
     display: block;
-    text-align: center;
+    color: #ff4f00;
 }
-
 
 .calculator{
     display: inline-block;
@@ -27,7 +23,7 @@ body{
     background-color: #ffffff;
     color: #000000;
     font-size: 40px;
-    padding: 8px;
+    padding: 8px 16px 8px 8px;
     margin-bottom: 12px;
     text-align: right;
     font-weight: bold;
@@ -45,7 +41,7 @@ body{
     border-radius: 20px;
 }
 .calc-button:active{
-    background-color: #ffffff;
+    filter: brightness(150%);
 }
 .operator{
     background-color: #ff4f00;
@@ -53,5 +49,5 @@ body{
 }
 
 .clear{
-    background-color: #ff0000;
+    background-color: #a6a6a6;
 }
